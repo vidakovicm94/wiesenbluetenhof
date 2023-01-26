@@ -1,0 +1,24 @@
+[
+    {
+        "title": "Grün",
+        "description": "Gurke",
+        "id":1
+    },
+    
+    {
+        "title": "Rot",
+        "description": "Erdbeere",
+        "id":2
+    },
+    {
+        "title": "Braun",
+        "description": "Kartoffel",
+        "id":3
+    },
+    {
+        "title": "Gelb",
+        "description": "Paprika",
+        "id":4
+    }
+]
+  

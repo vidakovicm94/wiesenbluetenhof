@@ -1,0 +1,71 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+   
+}
+
+a{
+    text-decoration: none;
+    color:#000;
+}
+
+html,body{
+    width: 100%;
+    height:100%;
+    font-family: 'Poppins', sans-serif;
+    text-align: justify;
+}
+
+
+
+.containerForm{
+ 
+    height:100vh
+}
+
+input{
+    margin:2px;
+    cursor: pointer;
+}
+
+.my p{
+    margin-bottom:0;
+}
+
+/*------------LOGIN------------*/
+.rounded-t-5 {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+}
+
+@media (min-width: 992px) {
+    .rounded-tr-lg-0 {
+        border-top-right-radius: 0;
+    }
+
+    .rounded-bl-lg-5 {
+        border-bottom-left-radius: 0.5rem;
+    }
+}
+
+.lableStyle{
+    top:8px;
+    left:30px;
+    background-color: #fff;
+    font-size:.8em;
+}
+
+.logBtn{
+    width:12rem;
+}
+
+.active{
+    font-weight:bolder;
+}
+
+.gridWrapper{
+    margin:0 auto;
+    width: 100%;
+    background-color: #000;
+}
