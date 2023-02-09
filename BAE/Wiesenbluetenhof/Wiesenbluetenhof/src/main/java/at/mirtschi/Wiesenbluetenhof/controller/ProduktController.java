@@ -25,6 +25,8 @@ public class ProduktController {
         return product;
     }
 
+    // @Valid - Übernahme der Validierung v. DTO
+
     @PostMapping("/findBy/category/")
     public List<Product> findProductsByCategory(@RequestBody @Valid Category category) {
         return prodRepo.findProductsByCategory(category);
@@ -39,7 +41,7 @@ public class ProduktController {
     public Optional<Product> findProductByID(@PathVariable long id) {
         return prodRepo.findById(id);
     }
-    @GetMapping ("/delete/{id}")
+    @DeleteMapping ("/delete/{id}")
     public String deleteProduct (@PathVariable long id)
     {
         if(prodRepo.existsById(id)) {
@@ -51,9 +53,6 @@ public class ProduktController {
 
     }
 
-    /*
-    * Tuna would be acceptable aswell :]
-     */
 
     private Product fromDTO(ProductDTO productDTO) {
         return new Product(productDTO.getName(),productDTO.getDescription(),

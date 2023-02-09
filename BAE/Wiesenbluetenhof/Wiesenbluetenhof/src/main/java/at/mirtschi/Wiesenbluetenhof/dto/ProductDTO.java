@@ -23,3 +23,5 @@ public class ProductDTO {
     @Positive
     private Long category;
 }
+
+//Validations in der DTO um die Controller nicht zu überladen.
