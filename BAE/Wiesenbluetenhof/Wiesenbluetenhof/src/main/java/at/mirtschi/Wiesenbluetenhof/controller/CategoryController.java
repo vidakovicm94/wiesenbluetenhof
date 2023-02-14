@@ -22,18 +22,19 @@ public class CategoryController {
         return category;
     }
 
-    @GetMapping ("/get")
+    @GetMapping ("/getAll")
     public List<Category> getAllCategories() {
         return categRepo.findAll();
     }
 
-    @GetMapping("/{cid}")
+    @GetMapping("/getById/{cid}")
     public Optional<Category> findCategoryByID(@PathVariable long cid) {
         return categRepo.findById(cid);
     }
     @DeleteMapping ("/delete/{cid}")
     public String deleteCategory (@PathVariable long cid)
     {
+
         if(categRepo.existsById(cid)) {
             categRepo.deleteById(cid);
             return "Erfolg!";

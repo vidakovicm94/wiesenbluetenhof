@@ -22,13 +22,13 @@ public class UserController {
         return user;
     }
 
-    @GetMapping("/get")
-    public List<User> getAllCategories () {
+    @GetMapping("/getAll")
+    public List<User> getAllUsers () {
         return userRepo.findAll();
     }
 
 
-    @DeleteMapping  ("/delete/{uid}")
+    @DeleteMapping  ("/{uid}")
     public String deleteUser (@PathVariable long uid) {
         if (userRepo.existsById(uid)) {
             userRepo.deleteById(uid);

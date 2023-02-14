@@ -24,15 +24,19 @@ public class Product
     @Column(name = "price")
     private Float price;
 
+    @Column(name = "imagepath")
+    private String imagepath;
+
     @OneToOne
     @JoinColumn(name = "cid")
     private Category category;
 
 
-    public Product(String name, String description, Float price, Category category) {
+    public Product(String name, String description, Float price,String imagepath, Category category) {
         this.name           = name;
         this.description    = description;
         this.price          = price;
+        this.imagepath      = imagepath;
         this.category       = category;
     }
 

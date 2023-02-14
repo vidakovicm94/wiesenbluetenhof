@@ -14,16 +14,17 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Cart {
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "cartid")
     private long cartid;
 
-    @OneToMany
-    @Column(name = "productlist")
-    private List<Product> productlist;
 
-    @OneToOne // Diskussion: ist es notwendig diesen User hier anzuführen.
-    @Column (name = "user")
+    @ManyToOne
+    private Product pid;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "uid", referencedColumnName = "uid")
     private User user;
 }

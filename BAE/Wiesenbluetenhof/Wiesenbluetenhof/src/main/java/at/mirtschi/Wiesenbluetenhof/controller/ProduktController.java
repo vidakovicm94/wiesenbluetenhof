@@ -56,6 +56,6 @@ public class ProduktController {
 
     private Product fromDTO(ProductDTO productDTO) {
         return new Product(productDTO.getName(),productDTO.getDescription(),
-                    productDTO.getPrice(),new Category(productDTO.getCategory(),""));
+                    productDTO.getPrice(),productDTO.getImagepath(),new Category(productDTO.getCategory(),""));
     }
 }

@@ -1,5 +1,6 @@
 package at.mirtschi.Wiesenbluetenhof.dto;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.Positive;
 import lombok.Getter;
@@ -11,14 +12,17 @@ public class ProductDTO {
     @Positive
     private Long pid;
 
-    @NotEmpty
+    @NotEmpty @NotBlank
     private String name;
 
-    @NotEmpty
+    @NotEmpty @NotBlank
     private String description;
 
     @Positive
     private Float price;
+
+    @NotEmpty @NotBlank
+    private String imagepath;
 
     @Positive
     private Long category;
